@@ -24,3 +24,10 @@ diff namespaces - eigen , gtest , qt
 if u wanna include std without whole namespace std u can manually include what all u want 
 
 every other method u create in c++ has manyruless 
+
+how code runs in compiler
+data - store | proccess | display 
+
+data can be stored in diff kind of datatypes and then proccesses that means it checks what all it included just like crosschecks whole code and then user displays the whole data 
+
+c++ identifiers - names of c++ which are already inbuilt in c++ like keywords
