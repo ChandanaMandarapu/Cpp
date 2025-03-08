@@ -46,3 +46,7 @@ user-defined - structure | union | enum| class | typedef
 
 operators 
 "=" - assignment operator
+
+functions - mainly we need a return type in functions defining it with a funcn name we define parameters and when we call in funcn its a argument it can return any datatype also a void (empty)
+
+returnType functionName (parameters){//funcnbody}
