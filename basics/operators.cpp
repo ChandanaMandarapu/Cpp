@@ -4,8 +4,8 @@ using namespace std;
 
 int main() {
    int numberOfCups;
-   double pricePerCup;
-   int totalPrice = numberOfCups * pricePerCup;
+   double pricePerCup,totalPrice,discountedPrice;
+   
    
    cout << "enter how many number of cups u want to have ?\n";
 
@@ -15,14 +15,14 @@ int main() {
 
    cin >> pricePerCup;
 
-   cout << totalPrice;
-
-   if (totalPrice > 100) 
-   {
-    totalPrice = totalPrice/5;
-    cout << totalPrice << endl;
+   totalPrice = numberOfCups * pricePerCup;
+   
+//    applying 5% discount
+   if (totalPrice > 100 ) {
+    discountedPrice = totalPrice - (totalPrice * 0.05) ;
+    cout << "Discounted Price is: " <<discountedPrice <<endl;
    }
-   else {
-    cout << "nodiscount" << endl;
+   else{
+    cout << "Total Price is " << totalPrice << endl;
    }
 }
