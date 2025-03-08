@@ -31,3 +31,15 @@ data - store | proccess | display
 data can be stored in diff kind of datatypes and then proccesses that means it checks what all it included just like crosschecks whole code and then user displays the whole data 
 
 c++ identifiers - names of c++ which are already inbuilt in c++ like keywords
+
+Datatypes - primitive | derived | user-defined 
+
+primitive - stored in memory of the language 
+derived - enhanced version of primitive datatypes
+user-defined - userdefined datatypes
+
+primitive - int,float,double,char,bool,void in c++ is empty.
+
+derived - array: collection of similar datatypes | function | pointer | reference
+
+user-defined - structure | union | enum| class | typedef
