@@ -43,3 +43,6 @@ primitive - int,float,double,char,bool,void in c++ is empty.
 derived - array: collection of similar datatypes | function | pointer | reference
 
 user-defined - structure | union | enum| class | typedef
+
+operators 
+"=" - assignment operator
