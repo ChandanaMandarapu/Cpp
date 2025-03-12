@@ -44,3 +44,97 @@ public:
 ## Complexity Analysis
 - **Time Complexity:** `O(log n)` (since digits reduce logarithmically)
 - **Space Complexity:** `O(1)` (only a few variables are used)
+
+
+# Reverse Integer
+
+### Problem Statement
+Given a signed 32-bit integer `x`, return `x` with its digits reversed. If reversing `x` causes the value to go outside the signed 32-bit integer range, return `0`.
+
+### Approach
+1. Initialize `ans` as 0 to store the reversed number.
+2. Extract the last digit of `x` using `x % 10` and update `x` by removing the last digit (`x /= 10`).
+3. Check for overflow conditions: If `ans` exceeds `INT_MAX/10` or is smaller than `INT_MIN/10`, return `0`.
+4. Multiply `ans` by 10 and add the extracted digit.
+5. Repeat until `x` becomes 0.
+6. Return `ans`.
+
+### Code Explanation
+```cpp
+class Solution {
+public:
+    int reverse(int x) {
+        int ans = 0, rem;
+        while (x != 0) {
+            rem = x % 10;
+            x /= 10;
+            if (ans > INT_MAX / 10 || ans < INT_MIN / 10)
+                return 0;
+            ans = (ans * 10) + rem;
+        }
+        return ans;
+    }
+};
+```
+
+---
+
+# Power of Two
+
+### Problem Statement
+Check whether a given integer `n` is a power of two.
+
+### Approach
+1. If `n` is less than 1, return `false`.
+2. Keep dividing `n` by `2` until `n` becomes `1`.
+3. If `n` is odd at any step, return `false`.
+4. If `n` reaches `1`, return `true`.
+
+### Code Explanation
+```cpp
+class Solution {
+public:
+    bool isPowerOfTwo(int n) {
+        if (n < 1)
+            return false;
+        while (n != 1) {
+            if (n % 2 == 1)
+                return false;
+            n /= 2;
+        }
+        return true;
+    }
+};
+```
+
+---
+
+# Palindrome Number
+
+### Problem Statement
+Check whether a given integer `x` is a palindrome.
+
+### Approach
+1. If `x` is negative, return `false` (negative numbers can't be palindromes).
+2. Store `x` in `num` and initialize `ans` to 0 for storing the reversed number.
+3. Extract digits from `num` one by one and build the reversed number.
+4. If the reversed number equals `x`, return `true`, else return `false`.
+
+### Code Explanation
+```cpp
+class Solution {
+public:
+    bool isPalindrome(int x) {
+        if (x < 0)
+            return false;
+        int num = x, rem, ans = 0;
+        while (num) {
+            rem = num % 10;
+            num /= 10;
+            if (ans > INT_MAX / 10)
+                return false;
+            ans = ans * 10 + rem;
+        }
+        return ans == x;
+    }
+};
