@@ -183,3 +183,43 @@ public:
 
 ---
 
+
+# Power of Three
+
+## Problem Statement
+Given an integer `n`, return `true` if it is a **power of three**. Otherwise, return `false`.
+
+### Examples
+#### Example 1:
+**Input:** `n = 27`
+**Output:** `true`
+**Explanation:** `27 = 3^3`.
+
+#### Example 2:
+**Input:** `n = 14`
+**Output:** `false`
+**Explanation:** `14` is not a power of three.
+
+---
+
+## Approach
+1. **Edge Case:** If `n <= 0`, return `false`.
+2. **Divide n by 3 repeatedly:**
+   - While `n % 3 == 0`, divide `n` by 3.
+3. **Final Check:** If `n` becomes `1`, return `true` (means `n` was a power of three), else return `false`.
+
+### Code (C++)
+```cpp
+class Solution {
+public:
+    bool isPowerOfThree(int n) {
+        if (n <= 0) return false;
+        while (n % 3 == 0) {
+            n /= 3;
+        }
+        return n == 1;
+    }
+};
+```
+
+---
