@@ -138,3 +138,48 @@ public:
         return ans == x;
     }
 };
+
+---
+
+# Ugly Number
+
+## Problem Statement
+An **Ugly Number** is a number that only has prime factors **2, 3, and 5**. Given an integer `n`, return `true` if it is an **Ugly Number**, otherwise return `false`.
+
+### Examples
+#### Example 1:
+**Input:** `n = 6`
+**Output:** `true`
+**Explanation:** `6 = 2 × 3`, and only contains `2` and `3` as prime factors.
+
+#### Example 2:
+**Input:** `n = 14`
+**Output:** `false`
+**Explanation:** `14 = 2 × 7`, and `7` is not allowed.
+
+---
+
+## Approach
+1. **Edge Case:** If `n <= 0`, return `false` (ugly numbers must be positive).
+2. **Divide out factors of 2, 3, and 5:**
+   - Keep dividing `n` by 2 while `n % 2 == 0`.
+   - Keep dividing `n` by 3 while `n % 3 == 0`.
+   - Keep dividing `n` by 5 while `n % 5 == 0`.
+3. **Final Check:** If after all divisions `n` becomes `1`, return `true`. Otherwise, return `false`.
+
+### Code (C++)
+```cpp
+class Solution {
+public:
+    bool isUgly(int n) {
+        if (n <= 0) return false;
+        while (n % 2 == 0) n /= 2;
+        while (n % 3 == 0) n /= 3;
+        while (n % 5 == 0) n /= 5;
+        return n == 1;
+    }
+};
+```
+
+---
+
