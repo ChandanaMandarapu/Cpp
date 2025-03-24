@@ -16,8 +16,11 @@ int fact(int a) {
     }
     return factorial;
 }
-
+void doubleValue(int &num) {
+    num = num * 2;
+}
 int main() {
+    
     int a;
     cout << "Enter a number: ";
     cin >> a;
@@ -28,6 +31,16 @@ int main() {
         cout << "The number is Odd" << endl;
 
     cout << "Factorial of " << a << " is: " << fact(a) << endl;
+
+    return 0;
+
+    int a;
+    cout << "Enter a number: ";
+    cin >> a;
+
+    doubleValue(a);
+
+    cout << "Doubled value: " << a << endl;
 
     return 0;
 }
