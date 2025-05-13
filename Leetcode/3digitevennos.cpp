@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     vector<int> findEvenNumbers(vector<int>& digits) {
@@ -30,3 +34,22 @@ public:
         return ans;
     }
 };
+
+int main() {
+    Solution sol;
+
+    // Example test input
+    vector<int> digits = {2, 1, 3, 0};
+
+    // Call the function
+    vector<int> result = sol.findEvenNumbers(digits);
+
+    // Output result
+    cout << "Even numbers formed are: ";
+    for (int num : result) {
+        cout << num << " ";
+    }
+    cout << endl;
+
+    return 0;
+}
