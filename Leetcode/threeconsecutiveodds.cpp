@@ -1,3 +1,7 @@
+#include <iostream>
+#include <vector>
+using namespace std;
+
 class Solution {
 public:
     bool threeConsecutiveOdds(vector<int>& arr) {
@@ -13,3 +17,18 @@ public:
         return false;
     }
 };
+
+int main() {
+    Solution sol;
+
+    // Example test input
+    vector<int> arr = {1, 2, 34, 3, 4, 5, 7, 23, 12};
+
+    // Call the function
+    bool result = sol.threeConsecutiveOdds(arr);
+
+    // Output result
+    cout << (result ? "true" : "false") << endl;
+
+    return 0;
+}
